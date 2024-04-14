@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<div class="">
+		<h1>1</h1>
+		<button id="buttonTambah" >Tambah</button>
+		<a href="/page2">Pindah ke page 2</a>
+	</div>
+</Layout>
+
+<script>
+	const buttonTambah = document.querySelector("#buttonTambah");
+	let loop : number = 2;
+	buttonTambah.addEventListener("click",() => {
+		const h1 = document.querySelector("h1");
+		h1.innerText = loop.toString();
+		loop++
+	})
+</script>
